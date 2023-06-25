@@ -23,7 +23,11 @@ let posts = [];
 
 
 app.get("/", function(req, res){
-  res.render("home", {homeContent: homeStartingContent});
+  res.render("home", {
+    homeContent: homeStartingContent,
+    posts: posts,
+  });
+
 
 }); 
 
@@ -33,6 +37,19 @@ app.get("/about", function(req, res){
 
 app.get("/contact", function(req, res){
   res.render("contact", {contactParagraph: contactContent});
+});
+
+app.get("/posts/:postName", function(req, res){
+  const requestedTitle = req.params.postName;
+  posts.forEach(function(post){
+    let storedTitle = post.title;
+
+    if (storedTitle == requestedTitle){
+      console.log("Match found!");
+    } else{
+      console.log("Match not found!");
+    }
+  });
 });
 
 app.get("/compose", function(req, res){
