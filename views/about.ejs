@@ -1,12 +1,30 @@
 <%- include("partials/header"); %>
-    
+
+<style>
+    .image-container {
+        display: flex;
+        justify-content: center;
+    }
+    .foot-info{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
 <h1>About</h1>
 <p>
     <%= aboutParagraph %>
-
 </p>
 
+
+<div class="image-container">
+    <img src="https://snowwhitewrites.com/wp-content/uploads/2020/12/feather-3237961_1280.jpg" width="70%" height="50%" alt="ink and paper">
+</div>
+<br>
+<div class="foot-info">
+<p>If you're interested in contacting the creator of this blog website directly, just send me a mesasage on 
+    <a href="https://www.linkedin.com/in/ramazanima/">linkedin</a>
+     </p>
+    </div>
+
 <%- include("partials/footer"); %>
-
-
-    
