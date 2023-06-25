@@ -40,15 +40,16 @@ app.get("/contact", function(req, res){
 });
 
 app.get("/posts/:postName", function(req, res){
-  const requestedTitle = req.params.postName;
+  const requestedTitle = _.lowerCase(req.params.postName);
   posts.forEach(function(post){
-    let storedTitle = post.title;
+    let storedTitle = _.lowerCase(post.title); 
 
-    if (storedTitle == requestedTitle){
-      console.log("Match found!");
-    } else{
-      console.log("Match not found!");
-    }
+    if (storedTitle === requestedTitle){
+      res.render("post", {
+        title: post.title,
+        content: post.content,
+      });
+    } 
   });
 });
 
