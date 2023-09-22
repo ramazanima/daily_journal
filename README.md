@@ -69,4 +69,4 @@ We welcome contributions from the community. If you'd like to contribute to this
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Feel free to update this README further with more details about your project, including features, screenshots, and any additional information that would help users understand and use your Daily Journal app effectively.
+
